@@ -1,0 +1,6 @@
+# Pip requirements file
+#
+
+# beanbot requirements
+pyyaml
+discord

@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  beanbot:
+    container_name: beanbot
+    build: .
+    image: beanbot
+    hostname: beanbot
+    restart: always
+    tty: true
+    stop_signal: SIGINT
+    network_mode: bridge
+    volumes:
+      - "/opt/beanbot/config:/beanbot/config"
+      - "/opt/beanbot/logs:/beanbot/logs"
+    environment:
+      TZ: "America/Chicago"
